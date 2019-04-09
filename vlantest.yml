@@ -1,5 +1,11 @@
-- name: Set Port to VLAN
-  ios_l2_interface:
-    name: {{ interface }}
-    access_vlan: {{ vlan }}
-    mode: access
+---
+- name: Test VLAN Assignment
+  hosts: {{ IP }}
+ 
+  tasks:
+  
+  - name: Set Port to VLAN
+    ios_l2_interface:
+      name: {{ interface }}
+      access_vlan: {{ vlan }}
+      mode: access
