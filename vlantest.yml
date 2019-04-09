@@ -1,0 +1,5 @@
+- name: Set Port to VLAN
+  ios_l2_interface:
+    name: {{ interface }}
+    access_vlan: {{ vlan }}
+    mode: access
