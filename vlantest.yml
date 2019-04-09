@@ -1,9 +1,7 @@
 ---
 - name: Test VLAN Assignment
-  hosts: {{ IP }}
- 
-  tasks:
-  
+  hosts: test 
+  tasks:  
   - name: Set Port to VLAN
     ios_l2_interface:
       name: {{ interface }}
