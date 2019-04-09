@@ -1,8 +1,11 @@
 ---
-- name: Hello World!
-  hosts: localhost
+- name: Test VLAN
+  hosts: 10.147.247.230
  
   tasks:
  
-  - name: Hello World!
-    shell: echo "Hi! Tower is working."
+  - name: SET VLAN ON PORT
+    ios_l2_interface:
+	  name: GigabitEthernet1/0/13
+	  access_vlan: 2005
+	  mode: access
