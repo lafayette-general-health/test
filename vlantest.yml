@@ -1,6 +1,6 @@
 ---
 - name: Test VLAN Assignment
-  hosts: test 
+  hosts: 10.147.247.230
   tasks:  
   - name: Set Port to VLAN
     ios_l2_interface:
