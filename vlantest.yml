@@ -8,6 +8,6 @@
  
   - name: SET VLAN ON PORT
     ios_l2_interface:
-      name: {{ interface }}
-      access_vlan: {{ vlan }}
+      name: "{{ interface }}"
+      access_vlan: "{{ vlan }}"
       mode: access
