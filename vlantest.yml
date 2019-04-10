@@ -1,7 +1,9 @@
 ---
 - name: Test VLAN
   hosts: 10.147.247.230
-  ansible_connection=network_cli
+  ansible_connection: network_cli
+  ansible_network_os: ios
+
  
   tasks:
  
