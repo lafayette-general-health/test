@@ -1,4 +1,4 @@
-- hosts: {{ IP }}
+- hosts: "{{ IP }}"
   connection: local
   vars:
   tasks:
