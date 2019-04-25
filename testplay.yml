@@ -6,7 +6,8 @@
     - name: ssh facts
       register: iosfacts_out
       ios_facts:
-        gather_subset: interfaces 
-          - '!all'
+        gather_subset: 
+          - interfaces 
+          - '!hardware'
     - debug: 
         msg: "{{ iosfacts_out | to_nice_json }}"
