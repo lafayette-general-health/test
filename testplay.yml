@@ -5,6 +5,7 @@
     - name: ssh facts
       register: iosfacts_out
       ios_facts:
-        gather_subset: all
+        gather_subset: 
+          -interfaces 
     - debug: 
-        msg: "{{ iosfacts_out[ansible_net_interfaces] | to_nice_json }}"
+        msg: "{{ iosfacts_out | to_nice_json }}"
