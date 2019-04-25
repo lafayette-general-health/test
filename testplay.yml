@@ -5,5 +5,6 @@
     - name: ssh facts
       register: iosfacts_out
       ios_facts:
+        gather_subset: all
     - debug: 
         msg: "{{ iosfacts_out | to_nice_json }}"
