@@ -7,7 +7,7 @@
       register: iosfacts_out
       ios_facts:
         gather_subset: 
-          - !all
+          - "!all"
           - interfaces 
     - debug: 
         msg: "{{ iosfacts_out | to_nice_json }}"
