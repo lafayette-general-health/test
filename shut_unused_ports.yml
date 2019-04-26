@@ -1,5 +1,5 @@
 - hosts: "{{ HOSTGROUP }}"
-  connection: local
+  connection: ssh
   gather_facts: False
   vars:
     interface_list: []
