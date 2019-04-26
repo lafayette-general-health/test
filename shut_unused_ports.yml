@@ -1,0 +1,21 @@
+- hosts: {{ HOSTGROUP }}
+  connection: local
+  gather_facts: False
+  vars:
+    interface_list: []
+  tasks:
+    - name: get interface facts
+      ios_facts:
+        gather_subset: interfaces
+
+    - name: set interface list for down interfaces
+      set_fact:
+        interface_list : "{{ interface_list + [item] }}"
+      when: hostvars[inventory_hostname]['ansible_facts']['net_interfaces']['{{item}}']['operstatus'] == "down"
+      with_items: "{{ hostvars[inventory_hostname]['ansible_facts']['net_interfaces'].keys() }}"
+
+    - name: make interface down
+      ios_interface:
+        name: "{{ item }}"
+        enabled: False
+      with_items: "{{ interface_list }}"
