@@ -26,8 +26,8 @@
         name: DEAD-VLAN
         state: present
       
-     - name: Set downed interfaces to dead VLAN
-       ios_l2_interface:
-         name: "{{ item }}"
-         access_vlan: 999
-       with_items: "{{ interface_list }}"
+    - name: Set downed interfaces to dead VLAN
+      ios_l2_interface:
+        name: "{{ item }}"
+        access_vlan: 999
+      with_items: "{{ interface_list }}"
