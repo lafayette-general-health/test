@@ -1,4 +1,4 @@
-- hosts: {{ HOSTGROUP }}
+- hosts: "{{ HOSTGROUP }}"
   connection: local
   gather_facts: False
   vars:
