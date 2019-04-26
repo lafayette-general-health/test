@@ -7,6 +7,9 @@
     - name: Get interface facts
       ios_facts:
         gather_subset: interfaces
+      
+    - name: Reset
+      meta: reset_connection
 
     - name: Create list of interfaces that are down status
       set_fact:
