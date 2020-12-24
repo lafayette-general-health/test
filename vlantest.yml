@@ -1,8 +1,7 @@
 ---
-- name: Test VLAN
-  hosts: {{ hostname }}
+- hosts: "{{ hostname }}"
   connection: local
-  gather_facts: false
+  gather_facts: no
 
   tasks:
     - name: SET VLAN ON PORT
