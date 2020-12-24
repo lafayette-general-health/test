@@ -1,6 +1,5 @@
 ---
-- name: Test VLAN
-  hosts: "{{ hostname }}"
+- hosts: "{{ hostname }}"
   connection: local
   gather_facts: no
 
