@@ -1,11 +1,11 @@
 ---
-- hosts: "BLDG35-ENG-OFFICE"
+- hosts: "{{ hostname }}"
   connection: local
   gather_facts: False
 
   tasks:
     - name: SET VLAN ON PORT
       ios_l2_interface:
-        name: "GigabitEthernet1/0/7"
-        access_vlan: "2000"
+        name: "GigabitEthernet{{ switchNum }}/0/{{ portNum }}"
+        access_vlan: "{{ vlan }}"
         mode: access
