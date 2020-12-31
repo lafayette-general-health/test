@@ -1,0 +1,9 @@
+---
+  - name: BACKUP PLAYBOOK
+    hosts: "{{ hostname }}"
+    connection: network_cli
+    gather_facts: yes
+    tasks:
+      - name: BACKUP USING IOS_CONFIG
+        ios_config:
+          backup: yes
