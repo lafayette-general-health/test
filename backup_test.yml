@@ -1,7 +1,7 @@
 ---
   - name: BACKUP PLAYBOOK
     hosts: "{{ hostname }}"
-    network_os: ios
+    platform: ios
     connection: network_cli
     gather_facts: yes
 
