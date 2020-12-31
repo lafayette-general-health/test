@@ -4,6 +4,8 @@
     connection: network_cli
     gather_facts: yes
     tasks:
-      - name: BACKUP USING IOS_CONFIG
+      - name: Backup current switch config (ios)
         ios_config:
           backup: yes
+        register: backup_ios_location
+        when: ansible_network_os == 'ios'
