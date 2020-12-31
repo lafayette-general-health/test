@@ -8,3 +8,6 @@
       - name: Backup current switch config (ios)
         ios_config:
           backup: yes
+          backup_options:
+            filename: "{{ hostname }}.txt"
+            dir_path: /etc/ansible/
