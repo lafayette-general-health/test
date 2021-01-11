@@ -10,4 +10,4 @@
           backup: yes
           backup_options:
             filename: "{{ hostname }}.txt"
-            dir_path: /etc/ansible/
+            dir_path: /etc/ansible
