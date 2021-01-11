@@ -1,5 +1,6 @@
 ---
 - hosts: "{{ HOSTNAME }}"
+  ansible_connection: network_cli
 
   tasks:
     - name: Initialize Fact
