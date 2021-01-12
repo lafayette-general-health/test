@@ -1,0 +1,4 @@
+---
+- hosts: "{{ HOSTNAME }}"
+  connection: network_cli
+  gather_facts: True
